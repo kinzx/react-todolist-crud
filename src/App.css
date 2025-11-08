@@ -1,38 +1,231 @@
-.App {
-  text-align: center;
+/* === FONT & BODY === */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&display=swap');
+
+body {
+margin: 0;
+padding: 0;
+font-family: 'Urbanist', sans-serif; /* DIUBAH */
+background-color: #f7f6f3; /* <-- GANTI WARNA LATAR DI SINI */
+color: #1a1a1a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* === UTAMA (App.js) === */
+.app-container {
+max-width: 800px;
+margin: 40px auto;
+padding: 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-header h1 {
+font-weight: 800;
+font-size: 2.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.header-actions {
+display: flex;
+gap: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-task-btn {
+padding: 12px 20px;
+border-radius: 50px; /* Sangat bulat */
+border: 1px solid #ddd;
+background-color: #fff;
+font-family: 'Urbanist', sans-serif; /* DIUBAH */
+font-weight: 600;
+font-size: 0.9rem;
+cursor: pointer;
+background-color: #1a1a1a;
+color: #fff;
+border-color: #1a1a1a;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+/* === TASK LIST (TaskList.js) === */
+.task-card-wrapper {
+position: relative;
+margin-bottom: 15px;
+}
+
+.task-card {
+display: grid;
+grid-template-columns: 10px 1.5fr 1fr 1fr 1fr auto;
+align-items: center;
+gap: 15px;
+background-color: #fff;
+padding: 20px;
+border-radius: 20px; /* Lebih bulat */
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+border: 1px solid #eee;
+position: relative;
+z-index: 2;
+}
+
+/* Warna prioritas */
+.priority-bar {
+width: 10px;
+height: 100%;
+border-radius: 10px;
+justify-self: stretch;
+}
+.priority-bar.Hard { background-color: #ffb3a1; }
+.priority-bar.Medium { background-color: #a1d9b4; }
+.priority-bar.Low { background-color: #a1c8ff; }
+
+.task-details {
+display: flex;
+flex-direction: column;
+}
+
+.task-details .label {
+font-size: 0.75rem;
+color: #888;
+margin-bottom: 2px;
+}
+.task-details .value {
+font-weight: 700;
+font-size: 1rem;
+}
+.task-details .value.Hard { color: #d9534f; }
+.task-details .value.Medium { color: #5cb85c; }
+.task-details .value.Low { color: #0275d8; }
+
+.status-pill {
+background-color: #eee;
+color: #555;
+font-size: 0.8rem;
+font-weight: 600;
+padding: 6px 12px;
+border-radius: 50px;
+text-align: center;
+width: fit-content;
+}
+.status-pill.Done {
+background-color: #a1d9b4;
+color: #285a3a;
+}
+
+.task-actions {
+display: flex;
+gap: 10px;
+justify-content: flex-end;
+}
+.task-actions button {
+background: none;
+border: none;
+cursor: pointer;
+color: #888;
+padding: 5px;
+}
+.task-actions button:hover {
+color: #111;
+}
+
+/* CSS ini untuk memotong teks (ellipsis) jika terlalu panjang */
+.task-name-value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* === CSS KUSTOM UNTUK MODAL BOOTSTRAP === */
+/* Ini adalah kode yang benar-benar digunakan untuk Modal */
+
+.custom-modal .modal-content {
+border-radius: 24px !important; 
+border: none;
+padding: 15px; 
+background-color: #fff;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.custom-modal-header {
+border-bottom: none !important; 
+padding-bottom: 0;
+}
+.custom-modal-header .modal-title {
+font-weight: 800;
+font-size: 1.75rem;
+padding-left: 15px; 
+}
+.custom-modal-header .btn-close {
+position: absolute;
+top: 25px;
+right: 25px;
+}
+
+.custom-modal-body {
+padding: 15px 30px 30px 30px; 
+}
+
+.custom-form-control {
+border-radius: 12px !important; 
+background-color: #fafafa !important;
+border: 1px solid #ddd !important;
+padding: 12px 15px !important;
+font-size: 0.95rem !important;
+    font-family: 'Urbanist', sans-serif; /* DIUBAH */
+}
+.custom-form-control:focus {
+background-color: #fff !important;
+border-color: #1a1a1a !important;
+box-shadow: none !important;
+}
+
+.form-label {
+font-size: 0.8rem;
+font-weight: 600;
+color: #555;
+margin-bottom: 8px;
+}
+
+.custom-modal-footer {
+display: flex;
+gap: 10px;
+justify-content: flex-end;
+margin-top: 30px;
+}
+
+.modal-btn {
+padding: 12px 20px !important;
+border-radius: 50px !important;
+border: 1px solid #ddd !important;
+font-family: 'Urbanist', sans-serif; /* DIUBAH */
+font-weight: 700 !important;
+font-size: 0.9rem !important;
+}
+.modal-btn.primary {
+background-color: #1a1a1a !important;
+color: #fff !important;
+border-color: #1a1a1a !important;
+}
+.modal-btn.secondary {
+background-color: #fff !important;
+color: #555 !important;
+border-color: #ddd !important; /* DIPERBAIKI (dari !ad) */
+}
+
+.custom-modal .modal-footer {
+display: none;
+}
+
+/* Pastikan ini ada di App.css */
+.task-name-value {
+    white-space: nowrap;  /* Mencegah teks turun ke baris baru */
+    overflow: hidden;       /* Sembunyikan teks yang meluap */
+    text-overflow: ellipsis;/* Tampilkan "..." pada teks yang terpotong */
+}
+.task-details {
+display: flex;
+flex-direction: column;
+    min-width: 0; /* <-- TAMBAHKAN BARIS INI */
 }
