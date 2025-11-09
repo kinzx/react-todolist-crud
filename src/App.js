@@ -1,21 +1,17 @@
 import React, { useState } from 'react';
-// 'Dropdown' dan 'useMemo' sudah dihapus
 import TaskList from './components/TaskList';
 import TaskForm from './components/TaskForm';
 import './App.css';
-import { BsPlus } from 'react-icons/bs'; // Ikon untuk tombol Add
+import { BsPlus } from 'react-icons/bs';
 
 function App() {
     
     const [tasks, setTasks] = useState([
-        // Data contoh agar tidak kosong
         { id: 1, name: 'Mancing', priority: 'Hard', time: '7 pm', status: 'In Progress' },
         { id: 2, name: 'Masak', priority: 'Medium', time: '8 pm', status: 'Done' }
     ]);
     const [showForm, setShowForm] = useState(false);
     const [taskToEdit, setTaskToEdit] = useState(null);
-    
-    // State 'sortBy' dan logika 'sortedTasks' sudah dihapus
 
     const handleShowForm = () => setShowForm(true);
     const handleCloseForm = () => {
@@ -45,19 +41,16 @@ function App() {
             <header className="app-header">
                 <h1>Task List</h1>
                 <div className="header-actions">
-                    
-                    {/* Komponen Dropdown "Short by" sudah dihapus dari sini */}
-                    
                     <button className="add-task-btn" onClick={handleShowForm}>
                         <BsPlus size={20} /> Add Task
                     </button>
                 </div>
             </header>
             
-            <TaskList 
-                tasks={tasks} // Diubah kembali ke 'tasks' (bukan sortedTasks)
-                deleteTask={deleteTask} 
-                showEditForm={showEditForm} 
+            <TaskList
+                tasks={tasks}
+                deleteTask={deleteTask}
+                showEditForm={showEditForm}
             />
             
             {showForm && (
