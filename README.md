@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# React To-Do List CRUD
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplikasi web sederhana untuk manajemen tugas (To-Do List) yang dibangun dengan React. Aplikasi ini memungkinkan pengguna untuk membuat, membaca, memperbarui, dan menghapus (CRUD) tugas dengan antarmuka yang bersih dan modern.
 
-## Available Scripts
+![Screenshot Aplikasi To-Do List](placeholder.png) 
+*(Ganti `placeholder.png` dengan screenshot aplikasi Anda)*
 
-In the project directory, you can run:
+## ✨ Fitur
 
-### `npm start`
+- **Tambah Tugas:** Menambahkan tugas baru melalui sebuah modal, lengkap dengan nama tugas, waktu, prioritas, dan status.
+- **Lihat Daftar Tugas:** Menampilkan semua tugas dalam daftar yang terorganisir.
+- **Edit Tugas:** Memperbarui detail tugas yang sudah ada (nama, waktu, prioritas, status) pada modal yang sama.
+- **Hapus Tugas:** Menghapus tugas dari daftar dengan aman menggunakan modal konfirmasi.
+- **Manajemen Status:** Melacak kemajuan setiap tugas dengan status: `To Do`, `In Progress`, atau `Done`.
+- **Prioritas Tugas:** Memberi label prioritas pada setiap tugas: `Low`, `Medium`, atau `Hard`.
+- **Antarmuka Pengguna Kustom:** Menggunakan kombinasi React-Bootstrap dan CSS kustom untuk tampilan modal dan komponen lainnya yang unik dan menarik.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Tumpukan Teknologi (Tech Stack)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend:** React.js
+- **Komponen UI:** React-Bootstrap
+- **Ikon:** React Icons
+- **Manajemen State:** React Hooks (`useState`, `useEffect`)
 
-### `npm test`
+## 🛠️ Instalasi dan Setup Lokal
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal Anda.
 
-### `npm run build`
+1.  **Clone Repositori**
+    ```bash
+    git clone https://github.com/username/react-todolist-crud.git
+    ```
+    *(Jangan lupa ganti `https://github.com/username/react-todolist-crud.git` dengan URL repositori Anda)*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2.  **Masuk ke Direktori Proyek**
+    ```bash
+    cd react-todolist-crud
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3.  **Install Dependensi**
+    Gunakan `npm` atau `yarn` untuk menginstal semua dependensi yang dibutuhkan.
+    ```bash
+    npm install
+    ```
+    atau
+    ```bash
+    yarn install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4.  **Jalankan Aplikasi**
+    Setelah instalasi selesai, jalankan server pengembangan.
+    ```bash
+    npm start
+    ```
+    Aplikasi akan berjalan dan bisa diakses di `http://localhost:3000`.
 
-### `npm run eject`
+## 📝 Cara Penggunaan
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Klik tombol **"+ Add Task"** untuk membuka modal dan menambahkan tugas baru.
+- Isi semua field yang diperlukan (Task, Time, Priority, Status) lalu klik **"Add Task"**.
+- Untuk mengedit tugas, klik ikon pensil (edit) pada kartu tugas. Modal akan muncul dengan data yang sudah terisi. Ubah data yang diinginkan dan klik **"Update Task"**.
+- Untuk menghapus tugas, klik ikon tempat sampah (hapus). Sebuah modal konfirmasi akan muncul. Klik **"Delete"** untuk menghapus tugas secara permanen.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Dibuat dengan ❤️ untuk portofolio.
